@@ -27,8 +27,8 @@ export const putDb = async (id, content) => {
 
   //use our .put method to pass in content
   const request = store.put({
-    id: id,
-    content: content,
+    id: 1,
+    value: content,
   });
 
   //Get confirmation of the request
@@ -37,6 +37,19 @@ export const putDb = async (id, content) => {
 };
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error("getDb not implemented");
+export const getDb = async (e) => {
+  const jateDB = await openDB("jate", 1);
+
+  const tx = jateDB.transaction("jate", "readonly");
+
+  const store = tx.objectStore("jate");
+
+  const request = store.getAll();
+
+  // Get confirmation of the request.
+  const result = await request;
+  console.log("result.value", result);
+  return result;
+};
 
 initdb();
