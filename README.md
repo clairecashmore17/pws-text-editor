@@ -9,7 +9,7 @@
 JATE (Just Another Text Editor) is a single page app using PWA. Helpful for creating notes or storing code snippets on or offline.
 
 Deployment
-<a href = ">
+<a href = "https://frozen-plateau-83944.herokuapp.com/">JATE</a>
 
 ## Table of Contents
 
@@ -23,7 +23,10 @@ Deployment
 
 ## Installation
 
-This program can be run in a browser at with the provided url, or you may clone the repository and run
+This program can be run in a browser at with the provided url, or you may clone the repository and run on your local computer after
+
+- npm install
+- npm start
 
 ## Usage
 
@@ -32,7 +35,3 @@ Type in or paste code and be able to reopen with the same stored text after clos
 ## How to Contribute
 
 For the repo and submit a pull request for any contributions.
-
-## Tests
-
-N/A
